@@ -23,5 +23,14 @@ jobs:
       - name: Format
         run: uv run ruff format --check
 
+      - name: Cache MASSIVE es-ES
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: massive-1.1-es-ES
+
+      - name: Get MASSIVE es-ES and check row counts
+        run: uv run python -m massive_es_ar.data
+
       - name: Tests
         run: uv run pytest -q
