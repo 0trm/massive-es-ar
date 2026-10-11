@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.pyright/
+
+# Raw MASSIVE download stays out of git
+data/raw/
+
+# Secrets / local env
+.env
+.env.local
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+.claude/
